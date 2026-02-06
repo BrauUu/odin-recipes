@@ -1,20 +1,22 @@
 .container {
     width: 100%;
-    padding: 80px 0;
+    padding: 80px 30px;
     overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: 30px
 }
 
-.container>.recipes {
-    padding: 0 50px;
+.recipes {
     display: grid;
-    grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     row-gap: 75px;
     column-gap: 25px;
+
     width: 100%;
-    box-sizing: border-box;
 }
 
-.container>.recipes>.box {
+.recipes>.box {
     background-color: var(--primary-bg);
     height: 400px;
     
@@ -24,6 +26,7 @@
 
     display: flex;
     flex-direction: column;
+    
     gap: 10px;
 
     padding: 20px;
@@ -33,24 +36,24 @@
     text-decoration: none;
 }
 
-.container>.recipes>.box>.image-section {
+.recipes>.box>.image-section {
     display: flex;
     justify-content: center;
 
     margin-top: -70px;
+    height: 250px;
 }
 
-.container>.recipes>.box>.image-section>.image {
-    height: 250px;
+.recipes>.box>.image-section>.image {
+    max-height: 250px;
     filter: drop-shadow(4px 4px 10px #0000001F);
 }
 
-.container>.recipes>.box>.title {
+.recipes>.box>.title {
     font-size: 1.25rem;
     font-weight: 600;
 }
-
-.container>.recipes>.box>.description {
+.recipes>.box>.description {
     font-size: 0.9rem;
     color: var(--secondary-font);
     text-overflow: ellipsis;
@@ -60,13 +63,13 @@
     overflow: hidden;
 }
 
-.container>.recipes>.box>.badgers-section {
+.recipes>.box>.badgers-section {
     display: flex;
     gap: 10px;
     margin: 10px 0;
 }
 
-.container>.recipes>.box>.badgers-section>.badger {
+.badger {
     color: var(--secondary-font);
     background-color: var(--badger-bg);
     font-size: 0.9rem;
@@ -78,6 +81,6 @@
     gap: 5px;
 }
 
-.container>.recipes>.box>.badgers-section>.badger>.icon {
+.badger>.icon {
     height: 20px;
 }

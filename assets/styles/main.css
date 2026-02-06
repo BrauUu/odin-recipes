@@ -4,6 +4,7 @@
     font-family: 'Open Sans ', sans-serif;
     font-size: 1.1rem;
     color: var(--primary-font);
+    box-sizing: border-box;
 }
 
 body {
