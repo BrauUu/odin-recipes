@@ -4,7 +4,8 @@
     overflow-y: scroll;
     display: flex;
     flex-direction: column;
-    gap: 30px
+    gap: 30px;
+    position: relative;
 }
 
 .recipes {
@@ -19,14 +20,14 @@
 .recipes>.box {
     background-color: var(--primary-bg);
     height: 400px;
-    
+
     border-radius: 24px;
     -webkit-box-shadow: 4px 4px 10px 0 #0000001f;
     box-shadow: 4px 4px 10px 0 #0000001F;
 
     display: flex;
     flex-direction: column;
-    
+
     gap: 10px;
 
     padding: 20px;
@@ -41,11 +42,12 @@
     justify-content: center;
 
     margin-top: -70px;
-    height: 250px;
+    max-width: 100%;
+    max-height: 250px;
 }
 
 .recipes>.box>.image-section>.image {
-    max-height: 250px;
+    max-width: 100%;
     filter: drop-shadow(4px 4px 10px #0000001F);
 }
 
@@ -53,6 +55,7 @@
     font-size: 1.25rem;
     font-weight: 600;
 }
+
 .recipes>.box>.description {
     font-size: 0.9rem;
     color: var(--secondary-font);
@@ -83,4 +86,11 @@
 
 .badger>.icon {
     height: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    .recipes>.box>.image-section {
+        height: auto;
+        max-height: 250px;
+    }
 }

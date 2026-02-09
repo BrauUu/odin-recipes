@@ -44,3 +44,9 @@
     font-size: 0.8rem;
     color: #757575;
 }
+
+@media screen and (max-width: 600px) {
+    .menu {
+        display: none;
+    }
+}
